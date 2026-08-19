@@ -13,7 +13,7 @@ const samlStrategy = new Strategy(
 
     // Auth0 signs the SAML response/assertion. This certificate is the
     // trust anchor for signature verification.
-    idpCert: config.saml.idpCert,
+    cert: config.saml.idpCert,
 
     // SP-initiated responses contain InResponseTo. IdP-initiated responses
     // do not, so validate it when present.
