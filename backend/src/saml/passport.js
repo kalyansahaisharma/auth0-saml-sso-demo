@@ -38,7 +38,11 @@ const samlStrategy = new Strategy(
   },
   (profile, done) => {
     try {
-      const assertionId = profile.ID || profile.id;
+      const assertionId =
+            profile.ID ||
+            profile.id ||
+            profile.sessionIndex ||
+            profile.nameID;
 
       if (!assertionId) {
         return done(new Error('SAML assertion did not contain an assertion ID'));
