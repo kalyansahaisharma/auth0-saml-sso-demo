@@ -10,19 +10,19 @@ The source assignment requires Auth0 SAML SSO, SP-initiated and IdP-initiated au
 
 ## **1. Biggest gap: Auth0 SAML architecture is not completely specified** 
 
-- a. The ticket says: 
+-  The ticket says: 
 
    - i. “Set up Auth0 as our Identity Provider using SAML.” 
 
    - ii. And then says the Node.js application will be the SAML Service Provider. 
 
-- b. That establishes: 
+-  That establishes: 
 
    - i. Auth0 = IdP 
 
    - ii. Node.js Application = SP 
 
-- c. But it does **not clearly specify** : 
+-  But it does **not clearly specify** : 
 
    - i. Which Auth0 SAML application configuration should be used? 
 
@@ -44,17 +44,17 @@ These decisions matter because the backend's SAML configuration depends on them.
 
 ## **2. IdP-initiated flow is ambiguous** 
 
-- a. This is probably the **most important functional gap** . 
+ a. This is probably the **most important functional gap** . 
 
-- b. The ticket requires: 
+ b. The ticket requires: 
 
    - i. “IdP-initiated login” 
 
-- c. And says the user should start from Auth0 and land authenticated. 
+ c. And says the user should start from Auth0 and land authenticated. 
 
-- d. But it doesn't define exactly what they mean by IdP-initiated SSO. 
+ d. But it doesn't define exactly what they mean by IdP-initiated SSO. 
 
-- e. There are at least two possible interpretations: 
+ e. There are at least two possible interpretations: 
 
 - f. Option A — Auth0 dashboard/application launcher 
 
