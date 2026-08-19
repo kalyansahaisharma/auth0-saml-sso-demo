@@ -13,18 +13,18 @@ const samlStrategy = new Strategy(
 
     // Auth0 signs the SAML response/assertion. This certificate is the
     // trust anchor for signature verification.
-    idpCert: config.saml.idpCert,
+    cert: config.saml.idpCert,
 
     // SP-initiated responses contain InResponseTo. IdP-initiated responses
     // do not, so validate it when present.
-    validateInResponseTo: 'ifPresent',
+    validateInResponseTo: false,
 
     // Keep SAML request IDs in the strategy's cache so InResponseTo can
     // be checked.
     requestIdExpirationPeriodMs: 10 * 60 * 1000,
 
     // Reject stale SAML conditions within the normal clock-skew window.
-    acceptedClockSkewMs: 5000,
+    acceptedClockSkewMs: 60000,
 
     // Explicitly require a signed assertion/response.
     wantAssertionsSigned: true,

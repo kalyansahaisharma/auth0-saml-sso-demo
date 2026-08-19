@@ -66,5 +66,5 @@ function escapeHtml(value) {
 }
 
 app.listen(config.port, () => {
-  console.log(`SAML demo listening on ${config.baseUrl}`);
+  console.log(`Auth0 SAML demo listening on ${config.baseUrl}`);
 });
