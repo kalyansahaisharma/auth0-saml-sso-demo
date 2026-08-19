@@ -11,13 +11,13 @@
     <h1>Auth0 SAML 2.0 SSO Demo</h1>
     <p class="subtitle">Auth0 = Identity Provider · Node.js = Service Provider</p>
 
-    <section class="card">
+    <section class="card" id="loginsp">
       <h2>1. SP-initiated login</h2>
       <p>The user starts at the Service Provider and is redirected to Auth0.</p>
       <a class="button" href="/auth/login">Login with SSO</a>
     </section>
 
-    <section class="card">
+    <section class="card" id="loginidp">
       <h2>2. IdP-initiated login</h2>
       <p>The user starts at Auth0's Identity Provider login URL and Auth0 posts the SAML assertion to this app.</p>
       <a class="button secondary" href="/auth/idp-initiated">Start at Auth0 IdP</a>
@@ -30,15 +30,6 @@
       <div id="actions" hidden>
         <a class="button danger" href="/auth/logout">Logout</a>
       </div>
-    </section>
-
-    <section class="card small">
-      <h2>Useful endpoints</h2>
-      <ul>
-        <li><a href="/saml/metadata">SP metadata</a></li>
-        <li><a href="/api/me">Current identity JSON</a></li>
-        <li><a href="/health">Health</a></li>
-      </ul>
     </section>
 
     <p class="flow" id="flow"></p>

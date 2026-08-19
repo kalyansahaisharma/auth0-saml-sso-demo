@@ -3,6 +3,8 @@ async function loadSession() {
   const identity = document.getElementById('identity');
   const actions = document.getElementById('actions');
   const flow = document.getElementById('flow');
+  const loginsp = document.getElementById('loginsp');
+  const loginidp = document.getElementById('loginidp');
 
   const params = new URLSearchParams(window.location.search);
   const flowParam = params.get('flow');
@@ -29,6 +31,8 @@ async function loadSession() {
     status.textContent = 'Logged in successfully.';
     identity.hidden = false;
     actions.hidden = false;
+    loginsp.setAttribute('hidden', '');
+    loginidp.setAttribute('hidden', '');
 
     identity.textContent = [
       `Logged in as: ${data.user.email || '(no email claim)'}`,
