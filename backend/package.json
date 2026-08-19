@@ -1,0 +1,21 @@
+{
+  "name": "auth0-saml-sp-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal Auth0 SAML IdP to Node.js SAML SP demo",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "passport": "^0.7.0",
+    "passport-saml": "^3.2.4"
+  }
+}
