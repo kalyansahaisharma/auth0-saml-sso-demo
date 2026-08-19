@@ -401,7 +401,7 @@ http://localhost:3000/saml/acs
 
 For SP-initiated responses, the SAML library records the generated request ID and validates the returned `InResponseTo`.
 
-For IdP-initiated responses, there is no original AuthnRequest, so `InResponseTo` is absent. The configuration uses `validateInResponseTo: "ifPresent"`.
+For IdP-initiated responses, there is no original AuthnRequest, so `InResponseTo` is absent. The configuration uses `validateInResponseTo: "false"`.
 
 ### Assertion replay
 
